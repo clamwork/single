@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd ">
+
+    <dubbo:application name="single-upms-rpc-service"/>
+
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+
+    <dubbo:protocol name="dubbo" port="20881"/>
+
+    <!-- 系统 -->
+    <bean id="upmsSystemService" class="cn.com.jandar.upms.service.impl.UpmsSystemServiceImpl"/>
+    <dubbo:service interface="cn.com.jandar.upms.api.UpmsSystemService" ref="upmsSystemService" timeout="10000"/>
+
+    <!-- 组织 -->
+    <bean id="upmsOrganizationService" class="cn.com.jandar.upms.service.impl.UpmsOrganizationServiceImpl"/>
+    <dubbo:service interface="cn.com.jandar.upms.api.UpmsOrganizationService" ref="upmsOrganizationService" timeout="10000"/>
+
+    <!-- 用户组织 -->
+    <bean id="upmsUserOrganizationService" class="cn.com.jandar.upms.service.impl.UpmsUserOrganizationServiceImpl"/>
+    <dubbo:service interface="cn.com.jandar.upms.api.UpmsUserOrganizationService" ref="upmsUserOrganizationService" timeout="10000"/>
+
+    <!-- 用户 -->
+    <bean id="upmsUserService" class="cn.com.jandar.upms.service.impl.UpmsUserServiceImpl"/>
+    <dubbo:service interface="cn.com.jandar.upms.api.UpmsUserService" ref="upmsUserService" timeout="10000"/>
+
+    <!-- 角色 -->
+    <bean id="upmsRoleService" class="cn.com.jandar.upms.service.impl.UpmsRoleServiceImpl"/>
+    <dubbo:service interface="cn.com.jandar.upms.api.UpmsRoleService" ref="upmsRoleService" timeout="10000"/>
+
+    <!-- 权限 -->
+    <bean id="upmsPermissionService" class="cn.com.jandar.upms.service.impl.UpmsPermissionServiceImpl"/>
+    <dubbo:service interface="cn.com.jandar.upms.api.UpmsPermissionService" ref="upmsPermissionService" timeout="10000"/>
+
+    <!-- 角色权限 -->
+    <bean id="upmsRolePermissionService" class="cn.com.jandar.upms.service.impl.UpmsRolePermissionServiceImpl"/>
+    <dubbo:service interface="cn.com.jandar.upms.api.UpmsRolePermissionService" ref="upmsRolePermissionService" timeout="10000"/>
+
+    <!-- 用户权限 -->
+    <bean id="upmsUserPermissionService" class="cn.com.jandar.upms.service.impl.UpmsUserPermissionServiceImpl"/>
+    <dubbo:service interface="cn.com.jandar.upms.api.UpmsUserPermissionService" ref="upmsUserPermissionService" timeout="10000"/>
+
+    <!-- 用户角色 -->
+    <bean id="upmsUserRoleService" class="cn.com.jandar.upms.service.impl.UpmsUserRoleServiceImpl"/>
+    <dubbo:service interface="cn.com.jandar.upms.api.UpmsUserRoleService" ref="upmsUserRoleService" timeout="10000"/>
+
+    <!-- 操作日志 -->
+    <bean id="upmsLogService" class="cn.com.jandar.upms.service.impl.UpmsLogServiceImpl"/>
+    <dubbo:service interface="cn.com.jandar.upms.api.UpmsLogService" ref="upmsLogService" timeout="10000"/>
+
+    <!-- 接口服务 -->
+    <bean id="upmsApiService" class="cn.com.jandar.upms.service.impl.UpmsApiServiceImpl"/>
+    <dubbo:service interface="cn.com.jandar.upms.api.UpmsApiService" ref="upmsApiService" timeout="10000"/>
+
+</beans>

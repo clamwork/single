@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd ">
+
+    <dubbo:application name="single-upms-rpc-service"/>
+
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+
+    <!-- 订阅服务 -->
+    <dubbo:consumer check="false"/>
+
+    <!-- 系统 -->
+    <dubbo:reference id="upmsSystemService" interface="cn.com.jandar.upms.api.UpmsSystemService" mock="true"/>
+    <!-- 组织 -->
+    <dubbo:reference id="upmsOrganizationService" interface="cn.com.jandar.upms.api.UpmsOrganizationService" mock="true"/>
+    <!-- 用户组织 -->
+    <dubbo:reference id="upmsUserOrganizationService" interface="cn.com.jandar.upms.api.UpmsUserOrganizationService" mock="true"/>
+    <!-- 用户 -->
+    <dubbo:reference id="upmsUserService" interface="cn.com.jandar.upms.api.UpmsUserService" mock="true"/>
+    <!-- 角色 -->
+    <dubbo:reference id="upmsRoleService" interface="cn.com.jandar.upms.api.UpmsRoleService" mock="true"/>
+    <!-- 权限 -->
+    <dubbo:reference id="upmsPermissionService" interface="cn.com.jandar.upms.api.UpmsPermissionService" mock="true"/>
+    <!-- 角色权限 -->
+    <dubbo:reference id="upmsRolePermissionService" interface="cn.com.jandar.upms.api.UpmsRolePermissionService" mock="true"/>
+    <!-- 用户权限 -->
+    <dubbo:reference id="upmsUserPermissionService" interface="cn.com.jandar.upms.api.UpmsUserPermissionService" mock="true"/>
+    <!-- 用户角色 -->
+    <dubbo:reference id="upmsUserRoleService" interface="cn.com.jandar.upms.api.UpmsUserRoleService" mock="true"/>
+    <!-- 操作日志 -->
+    <dubbo:reference id="upmsLogService" interface="cn.com.jandar.upms.api.UpmsLogService" mock="true"/>
+    <!-- 接口服务 -->
+    <dubbo:reference id="upmsApiService" interface="cn.com.jandar.upms.api.UpmsApiService" mock="true"/>
+
+</beans>

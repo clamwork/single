@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/single-common/single-common.iml" filepath="$PROJECT_DIR$/single-common/single-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/single-ui/single-ui.iml" filepath="$PROJECT_DIR$/single-ui/single-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/single-upms/single-upms.iml" filepath="$PROJECT_DIR$/single-upms/single-upms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/single-upms/single-upms-api/single-upms-api.iml" filepath="$PROJECT_DIR$/single-upms/single-upms-api/single-upms-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/single-upms/single-upms-client/single-upms-client.iml" filepath="$PROJECT_DIR$/single-upms/single-upms-client/single-upms-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/single-upms/single-upms-common/single-upms-common.iml" filepath="$PROJECT_DIR$/single-upms/single-upms-common/single-upms-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/single-upms/single-upms-server/single-upms-server.iml" filepath="$PROJECT_DIR$/single-upms/single-upms-server/single-upms-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/single-upms/single-upms-service/single-upms-service.iml" filepath="$PROJECT_DIR$/single-upms/single-upms-service/single-upms-service.iml" />
+    </modules>
+  </component>
+</project>

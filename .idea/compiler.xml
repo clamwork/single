@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="single-common" />
+        <module name="single-ui" />
+        <module name="single-upms-api" />
+        <module name="single-upms-client" />
+        <module name="single-upms-common" />
+        <module name="single-upms-server" />
+        <module name="single-upms-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="single-common" target="1.7" />
+      <module name="single-ui" target="1.7" />
+      <module name="single-upms" target="1.7" />
+      <module name="single-upms-api" target="1.7" />
+      <module name="single-upms-client" target="1.7" />
+      <module name="single-upms-common" target="1.7" />
+      <module name="single-upms-server" target="1.7" />
+      <module name="single-upms-service" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
